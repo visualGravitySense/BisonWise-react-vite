@@ -18,6 +18,19 @@
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
+
+.bp3-label {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.bp3-progress-bar {
+  height: 20px;
+  border-radius: 5px;
+}
+  
+
+
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);
@@ -39,4 +52,48 @@
 
 .read-the-docs {
   color: #888;
+}
+
+
+
+.mood-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.mood-card {
+  width: 200px;
+  text-align: center;
+  padding: 10px;
+}
+
+.mood-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.mood-icon {
+  font-size: 30px;
+  margin-right: 10px;
+}
+
+.mood-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.mood-time {
+  font-size: 12px;
+  color: #888;
+}
+
+.mood-gif img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
 }
