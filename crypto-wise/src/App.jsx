@@ -3,6 +3,8 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import PostFrequencyChart from './PostFrequencyChart';
+import ProgressBarWithLabel from './ProgressBarWithLabel';
+import MoodList from './MoodList';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -15,6 +17,13 @@ function App() {
     { day: 'Пятница', count: 7 },
     { day: 'Суббота', count: 2 },
     { day: 'Воскресенье', count: 1 }, ];
+
+  
+  const progressData = [
+    { label: 'Mood 1', value: 70, maxValue: 100 },
+    { label: 'Mood 2', value: 45, maxValue: 100 },
+    { label: 'Mood 3', value: 90, maxValue: 100 },
+  ];
 
   return (
     <>
@@ -37,6 +46,20 @@ function App() {
         </p>
       </div>
       <PostFrequencyChart data={postData} />
+
+      <div className="App" style={{ padding: '20px' }}>
+      {progressData.map((data, index) => (
+        <ProgressBarWithLabel
+          key={index}
+          label={data.label}
+          value={data.value}
+          maxValue={data.maxValue}
+        />
+      ))}
+    </div>
+
+    <MoodList />
+
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
@@ -44,4 +67,4 @@ function App() {
   )
 }
 
-export default App
+export default App;
