@@ -97,3 +97,33 @@
   height: auto;
   border-radius: 5px;
 }
+
+
+.calendar-container {
+  text-align: center;
+  margin: 20px;
+}
+
+.bp3-calendar {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.has-posts {
+  background-color: #ffeb3b; /* Желтый цвет для дней с постами */
+  color: white;
+}
+
+.bp3-calendar__tile {
+  border-radius: 5px;
+  position: relative;
+}
+
+.bp3-calendar__tile:hover {
+  background-color: #f0f0f0;
+}
+
+.bp3-calendar__tile:focus {
+  outline: none;
+}
