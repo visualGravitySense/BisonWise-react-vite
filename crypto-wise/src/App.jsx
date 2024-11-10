@@ -5,6 +5,7 @@ import './App.css'
 import PostFrequencyChart from './PostFrequencyChart';
 import ProgressBarWithLabel from './ProgressBarWithLabel';
 import MoodList from './MoodList';
+import PostCalendar from './PostCalendar';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -59,6 +60,11 @@ function App() {
     </div>
 
     <MoodList />
+
+    {/* <div className="App">
+      <h1>Мой календарь постов</h1> */}
+      <PostCalendar />
+    {/* </div> */}
 
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
