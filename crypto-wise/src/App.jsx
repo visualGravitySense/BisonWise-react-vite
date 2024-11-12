@@ -7,6 +7,11 @@ import ProgressBarWithLabel from './ProgressBarWithLabel';
 import MoodList from './MoodList';
 import PostCalendar from './PostCalendar';
 
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
+import CourseList from './components/CourseList';
+import CourseDetail from './components/CourseDetail';
+
 function App() {
   const [count, setCount] = useState(0)
 
@@ -28,6 +33,14 @@ function App() {
 
   return (
     <>
+
+      <Router>
+          <Routes>
+              <Route path="/" element={<CourseList />} />
+              <Route path="/course/:id" element={<CourseDetail />} />
+          </Routes>
+      </Router>
+
       <div>
         
         <a href="https://vite.dev" target="_blank">
